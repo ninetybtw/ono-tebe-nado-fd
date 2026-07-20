@@ -79,7 +79,7 @@
   height: 757px;
   padding: 165px 50px 50px;
 
-  background-image: url(../images/lotus-flower.jpg);
+  background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -264,41 +264,50 @@
 }
 
 .about {
-  width: 1100px;
-  box-sizing: border-box;
-  margin: 120px auto;
+  width: 1052px;
+  margin: 120px auto 0;
+
   display: grid;
   grid-template-columns: 240px 1fr;
   column-gap: 72px;
 }
 
 .about__logo {
+  width: 240px;
+  height: 240px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 240px;
-  height: 240px;
+
   border-radius: 50%;
-  background-color: #000000;
+  background: #000;
 }
 
 .about__logo-image {
   width: 148px;
   height: 114px;
-  object-fit: contain;
-  display: block;
+}
+
+.about__column {
+  padding-top: 100px;
 }
 
 .about__title {
-  margin: 100px 0 100px;
+  margin-bottom: 100px;
+
   font-size: 40px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .about__text {
-  grid-column: 2;
   font-size: 20px;
   line-height: 24px;
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 .footer {
