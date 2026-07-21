@@ -268,8 +268,6 @@
 
 .about {
   width: 1052px;
-  height: 595px;
-  box-sizing: border-box;
   margin: 120px auto 0;
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -312,6 +310,10 @@
 
   font-size: 20px;
   line-height: 24px;
+}
+
+.about__text p {
+  margin: 0;
 }
 
 .footer {
