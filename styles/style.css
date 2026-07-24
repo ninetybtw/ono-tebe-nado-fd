@@ -49,34 +49,39 @@
   display: block;
 }
 
-.header__address {
-  font-style: normal;
-  justify-self: end;
-  width: 230px;
-}
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 
-.header__address-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+  max-width: 240px;
 
-.header__address-item {
-  line-height: 24px;
   font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
 }
 
-.header__address-link {
-  color: #000;
+.address__link {
   text-decoration: underline;
-  text-underline-offset: 4px;
+}
+
+.address__text {
+  margin: 0;
+}
+
+.header__address {
+  justify-self: end;
+}
+
+.footer__address {
+  align-self: flex-start;
 }
 
 .cover {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   position: relative;
 
-  height: 757px;
+  min-height: 757px;
   padding: 165px 50px 50px;
 
   background-image: url(../images/lotus-flower.jpg);
@@ -95,7 +100,19 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.cover,
+.card {
+  position: relative;
+}
+
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 2;
 }
 
 .cover__title {
@@ -103,7 +120,6 @@
 
   font-size: 100px;
   font-weight: 700;
-  line-height: 115px;
   letter-spacing: 30px;
   text-transform: uppercase;
 
@@ -117,6 +133,7 @@
 
 .aligned-text_center {
   margin-top: 40px;
+  padding-left: 30px;
   text-align: center;
 }
 
@@ -157,7 +174,10 @@
 
   color: white;
 
+  font-family: "Raleway", sans-serif;
   font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
   text-transform: uppercase;
 
   cursor: pointer;
@@ -178,6 +198,7 @@
 
 .lots__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 
   margin: 0;
@@ -191,6 +212,20 @@
   min-height: 596px;
 }
 
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 1;
+}
+
+.card__link {
+  display: block;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
+
 .card {
   position: relative;
 
@@ -198,7 +233,6 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 100%;
   min-height: 596px;
   padding: 48px 40px;
 
@@ -223,21 +257,20 @@
 }
 
 .card__title {
-  font-family: "Raleway";
-  font-weight: 700;
+  margin: 0;
+
   font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
   text-transform: uppercase;
   text-decoration: underline;
-  line-height: 1.2;
-  text-underline-offset: 3px;
-  margin: 0;
 }
 
 .card__text {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 120%;
   margin: 0;
+
+  font-size: 20px;
+  line-height: 120%;
 }
 
 .lots__look-more {
@@ -267,11 +300,12 @@
 }
 
 .about {
-  width: 1052px;
-  margin: 120px auto 0;
   display: grid;
   grid-template-columns: 240px 1fr;
   column-gap: 72px;
+
+  width: auto;
+  margin: 155px 24px 0 71px;
 }
 
 .about__logo {
@@ -317,33 +351,12 @@
 }
 
 .footer {
-  margin: 150px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+
+  margin: 180px auto 0;
   padding: 0 50px 82px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.footer__address {
-  width: 264px;
-  font-style: normal;
-}
-
-.footer__address-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer__address-item {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.footer__address-link {
-  color: #000;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .footer__menu {
@@ -389,4 +402,8 @@
   display: block;
   width: 48px;
   height: 48px;
+}
+
+.footer__address {
+  justify-self: start;
 }
