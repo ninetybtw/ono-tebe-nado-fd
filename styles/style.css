@@ -75,6 +75,7 @@
 
 .footer__address {
   align-self: flex-start;
+  justify-self: start;
 }
 
 .cover {
@@ -399,8 +400,4 @@
   display: block;
   width: 48px;
   height: 48px;
-}
-
-.footer__address {
-  justify-self: start;
 }
